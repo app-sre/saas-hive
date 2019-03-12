@@ -1,0 +1,7 @@
+contexts:
+- data:
+    output_dir: hive-processed
+    services_dir: hive-services
+    templates_dir: hive-templates
+  name: hive
+current: hive

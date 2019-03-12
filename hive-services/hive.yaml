@@ -1,0 +1,11 @@
+services:
+- hash: none
+  name: hive
+  path: /hack/olm-registry/olm-artifacts-template.yaml
+  url: https://github.com/openshift/hive
+  hash_length: 7
+  environments:
+  - name: staging
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/hive-registry
+      CHANNEL: staging
