@@ -1,5 +1,5 @@
 services:
-- hash: 485932e93130a259a2bf59f6ea9f4ab436fad1ce
+- hash: c6dbd8e7006d7cb1e0f372ad912f518dbf3e4338
   name: hive
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/hive
