@@ -5,6 +5,10 @@ services:
   url: https://github.com/openshift/hive
   hash_length: 7
   environments:
+  - name: production
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/hive-registry
+      CHANNEL: production
   - name: staging
     parameters:
       REGISTRY_IMG: quay.io/app-sre/hive-registry
