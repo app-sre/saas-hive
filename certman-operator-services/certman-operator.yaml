@@ -1,0 +1,15 @@
+services:
+- hash: 0a5e2b891727d5996421a3ca5efe91f746c75d7f 
+  name: certman-operator
+  path: /hack/olm-registry/olm-artifacts-template.yaml
+  url: https://github.com/openshift/certman-operator
+  hash_length: 7
+  environments:
+  - name: production
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/certman-operator-registry
+      CHANNEL: production
+  - name: staging
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/certman-operator-registry
+      CHANNEL: staging
