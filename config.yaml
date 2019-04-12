@@ -9,4 +9,14 @@ contexts:
     services_dir: aws-account-operator-services
     templates_dir: aws-account-operator-templates
   name: aws-account-operator
+- data:
+    output_dir: deadmanssnitch-operator-processed
+    services_dir: deadmanssnitch-operator-services
+    templates_dir: deadmanssnitch-operator-templates
+  name: deadmanssnitch-operator
+- data:
+    output_dir: pagerduty-operator-processed
+    services_dir: pagerduty-operator-services
+    templates_dir: pagerduty-operator-templates
+  name: pagerduty-operator
 current: hive
