@@ -9,4 +9,9 @@ contexts:
     services_dir: aws-account-operator-services
     templates_dir: aws-account-operator-templates
   name: aws-account-operator
+- data:
+    output_dir: certman-operator-processed
+    services_dir: certman-operator-services
+    templates_dir: certman-operator-templates
+  name: certman-operator
 current: hive
