@@ -4,4 +4,9 @@ contexts:
     services_dir: hive-services
     templates_dir: hive-templates
   name: hive
+- data:
+    output_dir: aws-account-operator-processed
+    services_dir: aws-account-operator-services
+    templates_dir: aws-account-operator-templates
+  name: aws-account-operator
 current: hive
