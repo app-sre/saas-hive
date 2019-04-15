@@ -1,0 +1,15 @@
+services:
+- hash: none
+  name: pagerduty-operator
+  path: /hack/olm-registry/olm-artifacts-template.yaml
+  url: https://github.com/openshift/pagerduty-operator
+  hash_length: 7
+  environments:
+  - name: production
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/pagerduty-operator-registry
+      CHANNEL: production
+  - name: staging
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/pagerduty-operator-registry
+      CHANNEL: staging
