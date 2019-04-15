@@ -19,4 +19,9 @@ contexts:
     services_dir: pagerduty-operator-services
     templates_dir: pagerduty-operator-templates
   name: pagerduty-operator
+- data:
+    output_dir: certman-operator-processed
+    services_dir: certman-operator-services
+    templates_dir: certman-operator-templates
+  name: certman-operator
 current: hive
