@@ -24,4 +24,9 @@ contexts:
     services_dir: certman-operator-services
     templates_dir: certman-operator-templates
   name: certman-operator
+- data:
+    output_dir: managed-cluster-config-processed
+    services_dir: managed-cluster-config-services
+    templates_dir: managed-cluster-config-templates
+  name: managed-cluster-config
 current: hive
