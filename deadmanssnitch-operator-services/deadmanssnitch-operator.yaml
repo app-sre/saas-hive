@@ -1,5 +1,5 @@
 services:
-- hash: none
+- hash: 10e0730d6f6ad52b9dd9bb52bdb1fda45d7b2565
   name: deadmanssnitch-operator
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/deadmanssnitch-operator
