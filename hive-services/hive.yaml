@@ -1,5 +1,5 @@
 services:
-- hash: a5d26569cd32b3cd3b2556f8555b5dfa2e041070
+- hash: 2342f033ce2b8f695ac3997856f938a03005dec8
   name: hive
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/hive
@@ -9,7 +9,9 @@ services:
     parameters:
       REGISTRY_IMG: quay.io/app-sre/hive-registry
       CHANNEL: production
+      EXTERNAL_DNS_IMAGE: quay.io/app-sre/external-dns:0ffa29c
   - name: staging
     parameters:
       REGISTRY_IMG: quay.io/app-sre/hive-registry
       CHANNEL: staging
+      EXTERNAL_DNS_IMAGE: quay.io/app-sre/external-dns:latest
