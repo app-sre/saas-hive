@@ -1,7 +1,7 @@
 services:
 - hash: none
   name: configure-alertmanager-operator
-  path: /hack/olm-registry/olm-artifacts-template.yaml
+  path: /build/templates/olm-artifacts-template.yaml.tmpl
   url: https://github.com/openshift/configure-alertmanager-operator
   hash_length: 7
   environments:
