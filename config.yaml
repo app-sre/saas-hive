@@ -29,4 +29,9 @@ contexts:
     services_dir: dedicated-admin-operator-services
     templates_dir: dedicated-admin-operator-templates
   name: dedicated-admin-operator
+- data:
+    output_dir: configure-alertmanager-operator-processed
+    services_dir: configure-alertmanager-operator-services
+    templates_dir: configure-alertmanager-operator-templates
+  name: configure-alertmanager-operator
 current: hive
