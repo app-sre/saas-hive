@@ -24,4 +24,9 @@ contexts:
     services_dir: certman-operator-services
     templates_dir: certman-operator-templates
   name: certman-operator
+- data:
+    output_dir: configure-alertmanager-operator-processed
+    services_dir: configure-alertmanager-operator-services
+    templates_dir: configure-alertmanager-operator-templates
+  name: configure-alertmanager-operator
 current: hive

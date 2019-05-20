@@ -1,0 +1,15 @@
+services:
+- hash: none
+  name: configure-alertmanager-operator
+  path: /build/templates/olm-artifacts-template.yaml.tmpl
+  url: https://github.com/openshift/configure-alertmanager-operator
+  hash_length: 7
+  environments:
+  - name: production
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator
+      CHANNEL: production
+  - name: staging
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator
+      CHANNEL: staging
