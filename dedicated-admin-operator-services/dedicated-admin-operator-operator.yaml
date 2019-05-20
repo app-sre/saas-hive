@@ -1,0 +1,15 @@
+services:
+- hash: none
+  name: dedicated-admin-operator
+  path: /build/templates/olm-artifacts-template.yaml.tmpl
+  url: https://github.com/openshift/dedicated-admin-operator
+  hash_length: 7
+  environments:
+  - name: production
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator
+      CHANNEL: production
+  - name: staging
+    parameters:
+      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator
+      CHANNEL: staging
