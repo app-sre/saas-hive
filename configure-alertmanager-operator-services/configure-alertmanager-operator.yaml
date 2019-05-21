@@ -7,9 +7,9 @@ services:
   environments:
   - name: production
     parameters:
-      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator
+      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator-registry
       CHANNEL: production
   - name: staging
     parameters:
-      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator
+      REGISTRY_IMG: quay.io/app-sre/configure-alertmanager-operator-registry
       CHANNEL: staging
