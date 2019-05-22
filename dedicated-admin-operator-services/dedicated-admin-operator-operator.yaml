@@ -7,9 +7,9 @@ services:
   environments:
   - name: production
     parameters:
-      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator
+      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator-registry
       CHANNEL: production
   - name: staging
     parameters:
-      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator
+      REGISTRY_IMG: quay.io/app-sre/dedicated-admin-operator-registry
       CHANNEL: staging
