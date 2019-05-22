@@ -11,9 +11,11 @@ services:
       CHANNEL: production
       EXTERNAL_DNS_IMAGE: quay.io/app-sre/external-dns:0ffa29c
       EXTERNAL_DNS_MANAGED_DOMAIN: p1.openshiftapps.com
+      ADDITIONAL_CERTIFICATE_AUTHORITY: letsencrypt-ca
   - name: staging
     parameters:
       REGISTRY_IMG: quay.io/app-sre/hive-registry
       CHANNEL: staging
       EXTERNAL_DNS_IMAGE: quay.io/app-sre/external-dns:latest
       EXTERNAL_DNS_MANAGED_DOMAIN: s1.devshift.org
+      ADDITIONAL_CERTIFICATE_AUTHORITY: letsencrypt-ca
