@@ -1,5 +1,5 @@
 services:
-- hash: none
+- hash: 3e3280fd9c6fb8cc8f18e1cc403ecf5b0f5803a9
   name: dedicated-admin-operator
   path: /build/templates/olm-artifacts-template.yaml.tmpl
   url: https://github.com/openshift/dedicated-admin-operator
