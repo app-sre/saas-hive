@@ -34,4 +34,9 @@ contexts:
     services_dir: configure-alertmanager-operator-services
     templates_dir: configure-alertmanager-operator-templates
   name: configure-alertmanager-operator
+- data:
+    output_dir: managed-cluster-config-processed
+    services_dir: managed-cluster-config-services
+    templates_dir: managed-cluster-config-templates
+  name: managed-cluster-config
 current: hive
