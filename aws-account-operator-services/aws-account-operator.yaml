@@ -1,5 +1,5 @@
 services:
-- hash: cbab9c7af17c784ff68da3fbd4980839057cd4d8
+- hash: d1c7a925e3b2d728d81e21b8568cf4adc4ef158a
   name: aws-account-operator
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/aws-account-operator
