@@ -1,3 +1,4 @@
+services:
 - hash: none
   name: managed-prometheus-exporter-dns
   path: /hack/00-osd-managed-prometheus-exporter-dns.selectorsyncset.yaml.tmpl 
