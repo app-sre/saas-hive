@@ -38,12 +38,15 @@ contexts:
     output_dir: managed-prometheus-exporter-dns-processed
     services_dir: managed-prometheus-exporter-dns-services
     templates_dir: managed-prometheus-exporter-dns-templates
+  name: managed-prometheus-exporter-dns
 - data:
     output_dir: managed-prometheus-exporter-ebs-iops-reporter-processed
     services_dir: managed-prometheus-exporter-ebs-iops-reporter-services
     templates_dir: managed-prometheus-exporter-ebs-iops-reporter-templates
+  name: managed-prometheus-exporter-ebs-iops-reporter
 - data:
     output_dir: managed-prometheus-exporter-stuck-ebs-vols-processed
     services_dir: managed-prometheus-exporter-stuck-ebs-vols-services
     templates_dir: managed-prometheus-exporter-stuck-ebs-vols-templates
+  name: managed-prometheus-exporter-stuck-ebs-vols
 current: aws-account-operator
