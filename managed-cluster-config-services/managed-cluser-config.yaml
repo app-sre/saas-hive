@@ -1,5 +1,5 @@
 services:
-- hash: none
+- hash: 44eac3f49fe670046db23fc89aefb9d523407328
   name: managed-cluster-config
   path: /hack/00-osd-managed-cluster-config.selectorsyncset.yaml.tmpl 
   url: https://github.com/openshift/managed-cluster-config 
