@@ -1,10 +1,5 @@
 contexts:
 - data:
-    output_dir: hive-processed
-    services_dir: hive-services
-    templates_dir: hive-templates
-  name: hive
-- data:
     output_dir: aws-account-operator-processed
     services_dir: aws-account-operator-services
     templates_dir: aws-account-operator-templates
@@ -39,4 +34,4 @@ contexts:
     services_dir: managed-cluster-config-services
     templates_dir: managed-cluster-config-templates
   name: managed-cluster-config
-current: hive
+current: aws-account-operator
