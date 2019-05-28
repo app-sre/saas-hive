@@ -1,0 +1,5 @@
+- hash: none
+  name: managed-prometheus-exporter-stuck-ebs-vols 
+  path: /hack/00-osd-managed-prometheus-exporter-stuck-ebs-vols .selectorsyncset.yaml.tmpl 
+  url: https://github.com/openshift/managed-prometheus-exporter-stuck-ebs-vols  
+  hash_length: 7 
