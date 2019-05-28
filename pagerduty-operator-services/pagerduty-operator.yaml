@@ -1,5 +1,5 @@
 services:
-- hash: b5e7f317610026bfcc4da382605f454000c0948d
+- hash: 943e65a07390e3b9a0707b22a5245452378ef236
   name: pagerduty-operator
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/pagerduty-operator
