@@ -1,5 +1,5 @@
 services:
-- hash: none
+- hash: 3f4d14d28a9a121150dcb85dfb62bc19c73d69d9
   name: managed-prometheus-exporter-ebs-iops-reporter
   path: /hack/00-osd-managed-prometheus-exporter-ebs-iops-reporter.selectorsyncset.yaml.tmpl 
   url: https://github.com/openshift/managed-prometheus-exporter-ebs-iops-reporter 
