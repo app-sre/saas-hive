@@ -1,5 +1,5 @@
 services:
-- hash: none
+- hash: a3d5cd621d6bd698aabd21b30e8265655716a82d
   name: certman-operator
   path: /hack/olm-registry/olm-artifacts-template.yaml
   url: https://github.com/openshift/certman-operator
