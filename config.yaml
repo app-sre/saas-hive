@@ -5,11 +5,6 @@ contexts:
     templates_dir: deadmanssnitch-operator-templates
   name: deadmanssnitch-operator
 - data:
-    output_dir: certman-operator-processed
-    services_dir: certman-operator-services
-    templates_dir: certman-operator-templates
-  name: certman-operator
-- data:
     output_dir: dedicated-admin-operator-processed
     services_dir: dedicated-admin-operator-services
     templates_dir: dedicated-admin-operator-templates
