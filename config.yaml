@@ -1,10 +1,5 @@
 contexts:
 - data:
-    output_dir: deadmanssnitch-operator-processed
-    services_dir: deadmanssnitch-operator-services
-    templates_dir: deadmanssnitch-operator-templates
-  name: deadmanssnitch-operator
-- data:
     output_dir: dedicated-admin-operator-processed
     services_dir: dedicated-admin-operator-services
     templates_dir: dedicated-admin-operator-templates
@@ -29,4 +24,4 @@ contexts:
     services_dir: managed-prometheus-exporter-stuck-ebs-vols-services
     templates_dir: managed-prometheus-exporter-stuck-ebs-vols-templates
   name: managed-prometheus-exporter-stuck-ebs-vols
-current: deadmanssnitch-operator
+current: managed-prometheus-exporter-ebs-iops-reporter
