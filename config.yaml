@@ -15,11 +15,6 @@ contexts:
     templates_dir: dedicated-admin-operator-templates
   name: dedicated-admin-operator
 - data:
-    output_dir: configure-alertmanager-operator-processed
-    services_dir: configure-alertmanager-operator-services
-    templates_dir: configure-alertmanager-operator-templates
-  name: configure-alertmanager-operator
-- data:
     output_dir: managed-cluster-config-processed
     services_dir: managed-cluster-config-services
     templates_dir: managed-cluster-config-templates
