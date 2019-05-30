@@ -1,10 +1,5 @@
 contexts:
 - data:
-    output_dir: dedicated-admin-operator-processed
-    services_dir: dedicated-admin-operator-services
-    templates_dir: dedicated-admin-operator-templates
-  name: dedicated-admin-operator
-- data:
     output_dir: managed-cluster-config-processed
     services_dir: managed-cluster-config-services
     templates_dir: managed-cluster-config-templates
