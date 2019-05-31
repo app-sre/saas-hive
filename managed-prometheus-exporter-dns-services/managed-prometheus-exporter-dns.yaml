@@ -1,6 +1,0 @@
-services:
-- hash: d102fb301cc02e47b333775f56599d10f6c9bba9
-  name: managed-prometheus-exporter-dns
-  path: /hack/00-osd-managed-prometheus-exporter-dns.selectorsyncset.yaml.tmpl 
-  url: https://github.com/openshift/managed-prometheus-exporter-dns 
-  hash_length: 7 
