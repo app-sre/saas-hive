@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: prometheus-hive
+objects:
+- apiVersion: monitoring.coreos.com/v1
+  kind: Prometheus
+  metadata:
+    labels:
+      prometheus: hive
+    name: hive
+    namespace: ${NAMESPACE}
+  spec:
+    baseImage: ${PROMETHEUS_IMAGE}
+    listenLocal: true
+    nodeSelector:
+      beta.kubernetes.io/os: linux
+    replicas: 1
+    retention: 1d
+    ruleSelector:
+      matchLabels:
+        prometheus: hive
+        role: alert-rules
+    securityContext: {}
+    serviceAccountName: prometheus-hive
+    serviceMonitorSelector:
+      matchLabels:
+        prometheus: hive
+    version: ${PROMETHEUS_IMAGE_TAG}
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: prometheus-hive
+  subjects:
+  - kind: ServiceAccount
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - services
+    - endpoints
+    - pods
+    verbs:
+    - get
+    - list
+    - watch
+- apiVersion: v1
+  kind: Route
+  metadata:
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+  spec:
+    port:
+      targetPort: web
+    to:
+      kind: Service
+      name: prometheus-hive
+- apiVersion: v1
+  kind: Service
+  metadata:
+    labels:
+      prometheus: hive
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+  spec:
+    ports:
+    - name: web
+      port: 9090
+      targetPort: web
+    selector:
+      app: prometheus
+      prometheus: hive
+    sessionAffinity: ClientIP
+    type: ClusterIP
+- apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    labels:
+      prometheus: hive
+    name: prometheus-hive
+    namespace: ${NAMESPACE}
+  spec:
+    endpoints:
+    - interval: 60s
+      port: metrics
+      scheme: http
+    namespaceSelector:
+      matchNames:
+      - hive
+    selector:
+      matchLabels:
+        prometheus: hive
+parameters:
+- name: IMAGE_TAG
+  value: ""
+- name: NAMESPACE
+  value: hive-observability
+- name: PROMETHEUS_IMAGE
+  value: quay.io/prometheus/prometheus
+- name: PROMETHEUS_IMAGE_TAG
+  value: v2.3.2

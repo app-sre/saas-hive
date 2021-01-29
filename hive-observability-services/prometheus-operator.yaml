@@ -1,0 +1,6 @@
+services:
+- hash: ignore
+  name: prometheus-operator
+  path: /hive-observability-templates/prometheus-operator.yaml
+  url: https://github.com/app-sre/saas-hive
+  hash_length: 7
